@@ -26,7 +26,7 @@ To menu item model is connected URL validator. Its check that url could reversed
 All spaces cut off from a charfield values in the model's 'clean' function.
 
 For editing a models in admin interface implemented InlineFormset which connect to Admin Models.
-There are two Admin Models. One for edit MenuType and included Menu Items. Other for editing a menu item and a straight related child items.
+There are two Admin Models. One to edit MenuType and included Menu Items. Other to edit a menu item and a straight related child items.
 Menu item contains a 'parent' field, this one could be linked to self. 
 For avoiding recursive queries implemented custom form. There are possible choises for parents limited.
 When parent's 'menu type' change all inheritors's 'menu types' change too. Also user can't define parent from other 'menu type'. 
