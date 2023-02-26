@@ -35,6 +35,7 @@ Also user can't designite item's parent from other 'menu type'. Before that need
 For convenience added field in formset to show a child items, it contains links to changing them.
 
 For testing the application implemented sintetic urls with name 'index{n}' where n from 0 to 19 and attached test db. 
+In addition in utils.py can be found @query_debugger which shows count of queries to db in function
 
 
 
