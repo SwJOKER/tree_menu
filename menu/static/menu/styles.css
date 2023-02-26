@@ -1,0 +1,86 @@
+.menu,
+.menu ul,
+.menu li {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2px;
+  line-height: 1.1;
+  list-style: none;
+  font-family: "Roboto","Open Sans",helvetica,arial,sans-serif;
+}
+
+.menu > li {
+    margin-left: 18px;
+}
+
+.menu .hidden {
+    display: none;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu ul {
+  margin: 0 0 0 .5em; /* lead the line down from half of parent's letter */
+}
+
+.menu ul ul {
+  margin: 0 0 0 .2em; /* lead the line down from half of parent's letter */
+}
+
+.menu .current {
+    font-weight: bold;
+}
+
+.menu li li {
+  position: relative;
+  padding: .2em 0 0 1.2em; /* indent before a text */
+}
+
+.submenu li:not(:last-child) {
+  border-left: 1px solid #ccc; /* vertical line style */
+}
+
+.menu li li:before { /* horizontal line */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.1em; /* no more then indent before a text (1.2em) */
+  height: .8em; /* start approximately form half height of a letter (.5em + .2em) */
+  border-bottom: 1px solid #ccc;
+}
+
+.menu li li:has(>.hidden):before {
+  content: ">";
+  color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-left: 8px;
+  color: green;
+  width: 0px; /* no more then indent before a text (1.2em) */
+  height: 0.75em; /* start approximately form half height of a letter (.5em + .2em) */
+  line-height: 1.55em;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu > li:has(>ul):before {
+  content: '>';
+  color: green;
+  position: absolute;
+  top: auto;
+  left: 1em;
+  line-height: 1.2em;
+}
+
+.menu > li:not(:has(>.hidden)):before {
+    display: none;
+}
+
+.menu li:last-child:before { /* vertical line of the last element */
+  width: calc(1.1em - 1px);
+  border-left: 1px solid #ccc;
+}
+

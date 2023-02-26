@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load tree_menu %}
+
+{% block content %}
+    <nav>{% draw_menu "main" %}</nav>
+    <h2>Address: {{ request.path }}</h2>
+{% endblock %}
